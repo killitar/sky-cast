@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import headerComponent from './components/header-component.vue';
+</script>
 
 <template>
-  <div class="container">
-    <h1 class="text text-lg">Welcome to Tauri!</h1>
+  <div class="bg-softgray p-6">
+    <headerComponent />
   </div>
 </template>
 
