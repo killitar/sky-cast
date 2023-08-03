@@ -6,9 +6,9 @@ export default {
     extend: {
       colors: {
         softgray: '#202023',
+        whitegray: '#52525b',
         softblack: '#131315',
         cream: '#f0e7db',
-        whitecream: '#f5f0e8',
       },
     },
   },
