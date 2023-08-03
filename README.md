@@ -10,7 +10,7 @@ A beautiful weather app build with Vue & Tauri
 
 - [Vite](https://vitejs.dev/): A fast build tool
 
-- [TailwindCSS](https://tailwindcss.com/): A CSS library for building UI
+- [TailwindCSS](https://tailwindcss.com/): A CSS framework for building UI
 
 - [Tauri](https://tauri.app/): A framework for building cross-platform desktop apps using HTML, JS, and CSS
 
@@ -21,6 +21,7 @@ A beautiful weather app build with Vue & Tauri
 ## Get Stated
 
 ```sh
+git clone https://github.com/Killitar/sky-cast.git
 pnpm install
 pnpm tauri dev
 ```
