@@ -1,12 +1,12 @@
 # Sky Cast
 
-A beautiful weather app build with Vue & Tauri
+A weather app builded with Vue & Tauri
 
 ## Stack
 
 - [TypeScript](https://www.typescriptlang.org/): A typed JavaScript
 
-- [VUE](https://vuejs.org/): A JavaScript Framework, an approachable, performant and versatile framework for building web user interfaces.
+- [Vue](https://vuejs.org/): A JavaScript Framework, performant and versatile framework for building web user interfaces.
 
 - [Vite](https://vitejs.dev/): A fast build tool
 
@@ -28,6 +28,6 @@ pnpm tauri dev
 
 ## Authors
 
-Miroslav([@Killitar](https://github.com/Killitar))
+Miroslav([@killitar](https://github.com/Killitar))
 
-kokos([kokos](https://github.com/kokos1kkk))
+kokos([@kokos](https://github.com/kokos1kkk))
