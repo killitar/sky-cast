@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+  ? 'dark'
+  : 'white';
 const searchInput = ref<string>();
-const theme = ref<string>(
-  window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'white'
-);
+const currentTheme = ref<string>(theme);
 
 const toggleColorTheme = () => {
-  if (theme.value === 'white') {
-    theme.value = 'dark';
+  if (currentTheme.value === 'white') {
+    currentTheme.value = 'dark';
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('white');
   } else {
-    theme.value = 'white';
+    currentTheme.value = 'white';
     document.documentElement.classList.add('white');
     document.documentElement.classList.remove('dark');
   }
@@ -99,7 +100,7 @@ const toggleColorTheme = () => {
       </button>
 
       <button
-        v-if="theme === 'white'"
+        v-if="currentTheme === 'white'"
         @click="toggleColorTheme()"
         class="dark-theme-toggler-button flex justify-center items-center bg-sky-600 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-sky-700 duration-300"
       >
@@ -125,7 +126,7 @@ const toggleColorTheme = () => {
         </svg>
       </button>
       <button
-        v-if="theme === 'dark'"
+        v-if="currentTheme === 'dark'"
         @click="toggleColorTheme()"
         class="white-theme-toggler-button flex justify-center items-center bg-orange-300 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-orange-400 duration-300"
       >
