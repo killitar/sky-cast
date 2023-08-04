@@ -23,10 +23,10 @@ const toggleColorTheme = () => {
   <div class="flex items-center justify-between">
     <div class="search">
       <div
-        class="flex bg-whitecream dark:bg-softblack w-40 h-12 rounded-lg shadow-lg items-center justify-center px-2 md:w-80 duration-500"
+        class="flex bg-stone-100 dark:bg-zinc-700 w-40 h-12 rounded-lg shadow-lg items-center justify-center px-2 md:w-80 duration-500"
       >
         <svg
-          class="fill-current text-softgray dark:text-cream w-6 h-6 duration-500"
+          class="fill-current text-zinc-700 dark:text-yellow-50 w-6 h-6 duration-500"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -45,7 +45,7 @@ const toggleColorTheme = () => {
           </g>
         </svg>
         <input
-          class="w-full font-medium ml-1 text-lg text-softgray dark:text-cream h-6 border-t-transparent bg-transparent outline outline-none duration-500"
+          class="w-full font-medium ml-1 text-lg text-zinc-700 dark:text-yellow-50 h-6 border-t-transparent bg-transparent outline outline-none duration-500"
           v-model.trim="searchInput"
           name="search"
           autocomplete="off"
@@ -53,7 +53,7 @@ const toggleColorTheme = () => {
         />
         <div class="spin-search hidden">
           <div
-            class="float-right text-white text inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            class="float-right text-zinc-700 dark:text-yellow-50 text inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
             role="status"
           >
             <span
@@ -64,7 +64,7 @@ const toggleColorTheme = () => {
       </div>
 
       <div
-        class="search-result bg-cream dark:bg-softblack rounded-b-3xl shadow-lg absolute w-40 z-10 transition duration-150 ease-in-out hidden md:w-80"
+        class="search-result bg-stone-100 dark:bg-zinc-800 rounded-b-3xl shadow-lg absolute w-40 z-10 transition duration-150 ease-in-out md:w-80 hidden"
       >
         <hr class="" />
       </div>
@@ -76,7 +76,7 @@ const toggleColorTheme = () => {
         class="current-location-button flex justify-center items-center mr-4 bg-purple-600 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-purple-700 duration-300"
       >
         <svg
-          class="fill-current text-cream dark:text-softgray w-8 h-8 duration-500"
+          class="fill-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
           viewBox="0 0 48 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ const toggleColorTheme = () => {
         class="dark-theme-toggler-button flex justify-center items-center bg-zinc-600 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-zinc-700 duration-300"
       >
         <svg
-          class="fill-current stroke-current text-cream dark:text-softgray w-8 h-8 duration-500"
+          class="fill-current stroke-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -129,7 +129,7 @@ const toggleColorTheme = () => {
         class="white-theme-toggler-button flex justify-center items-center bg-orange-300 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-orange-400 duration-300"
       >
         <svg
-          class="fill-current text-cream dark:text-softgray w-8 h-8 duration-500"
+          class="fill-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
           viewBox="-5.5 0 32 32"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
