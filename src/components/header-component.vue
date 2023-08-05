@@ -20,13 +20,13 @@ const toggleColorTheme = () => {
 };
 </script>
 <template>
-  <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between mb-7">
     <div class="search">
       <div
-        class="flex bg-stone-100 dark:bg-zinc-700 w-40 h-12 rounded-lg shadow-lg items-center justify-center px-2 md:w-80 duration-500"
+        class="flex bg-stone-100 dark:bg-zinc-800 w-60 h-12 rounded-lg shadow-lg items-center justify-center px-2 md:w-80 duration-500"
       >
         <svg
-          class="fill-current text-zinc-700 dark:text-yellow-50 w-6 h-6 duration-500"
+          class="fill-current text-zinc-800 dark:text-yellow-50 w-6 h-6 duration-500"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -45,7 +45,7 @@ const toggleColorTheme = () => {
           </g>
         </svg>
         <input
-          class="w-full font-medium ml-1 text-lg text-zinc-700 dark:text-yellow-50 h-6 border-t-transparent bg-transparent outline outline-none duration-500"
+          class="w-full font-medium ml-1 text-lg text-zinc-800 dark:text-yellow-50 h-6 border-t-transparent bg-transparent outline outline-none duration-500"
           v-model.trim="searchInput"
           name="search"
           autocomplete="off"
@@ -53,7 +53,7 @@ const toggleColorTheme = () => {
         />
         <div class="spin-search hidden">
           <div
-            class="float-right text-zinc-700 dark:text-yellow-50 text inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            class="float-right text-zinc-800 dark:text-yellow-50 text inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
             role="status"
           >
             <span
