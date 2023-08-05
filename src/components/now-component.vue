@@ -6,7 +6,9 @@
     <h2 class="text-zinc-800 dark:text-stone-100 text-xl duration-500">
       Сегодня
     </h2>
-    <div class="highlight-list grid grid-rows-1 grid-cols-2 gap-3">
+    <div
+      class="highlight-list flex flex-col md:grid md:grid-rows-1 md:grid-cols-2 md:gap-3 duration-500"
+    >
       <div
         class="hightlight-card one mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl duration-500"
       >
@@ -196,7 +198,9 @@
         <div
           class="hightlight-card w-1/2 mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl h-40 duration-500"
         >
-          <h3 class="card-title text-zinc-700 text-xl mb-10">Ощущается как</h3>
+          <h3 class="card-title text-zinc-700 text-xl mb-4 xl:mb-10">
+            Ощущается как
+          </h3>
 
           <div class="card-list">
             <div class="card-item flex justify-between items-center">

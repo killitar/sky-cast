@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="p-6 mb-8 lg:mb-0 w-full h-1/3 lg:w-80 bg-stone-100 dark:bg-zinc-800 rounded-2xl shadow-md duration-500"
+    class="p-6 mb-8 lg:mb-0 lg:mr-4 w-full h-1/3 lg:w-80 bg-stone-100 dark:bg-zinc-800 rounded-2xl shadow-md duration-500"
   >
     <h2
       class="card-title font-medium text-zinc-800 dark:text-yellow-50 text-xl mb-4 duration-500"
