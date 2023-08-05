@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-  ? 'dark'
-  : 'white';
+const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "white";
 const searchInput = ref<string>();
 const currentTheme = ref<string>(theme);
 
 const toggleColorTheme = () => {
-  if (currentTheme.value === 'white') {
-    currentTheme.value = 'dark';
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('white');
+  if (currentTheme.value === "white") {
+    currentTheme.value = "dark";
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("white");
   } else {
-    currentTheme.value = 'white';
-    document.documentElement.classList.add('white');
-    document.documentElement.classList.remove('dark');
+    currentTheme.value = "white";
+    document.documentElement.classList.add("white");
+    document.documentElement.classList.remove("dark");
   }
 };
 </script>
 <template>
-  <div class="flex items-center justify-between mb-7">
-    <div class="search">
+  <div class="mb-7 flex items-center justify-between">
+    <div>
       <div
-        class="flex bg-stone-100 dark:bg-zinc-800 w-60 h-12 rounded-lg shadow-lg items-center justify-center px-2 md:w-80 duration-500"
+        class="flex h-12 w-60 items-center justify-center rounded-lg bg-stone-100 px-2 shadow-lg duration-500 dark:bg-zinc-800 md:w-80"
       >
         <svg
-          class="fill-current text-zinc-800 dark:text-yellow-50 w-6 h-6 duration-500"
+          class="h-6 w-6 fill-zinc-800 duration-500 dark:fill-yellow-50"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -45,15 +45,15 @@ const toggleColorTheme = () => {
           </g>
         </svg>
         <input
-          class="w-full font-medium ml-1 text-lg text-zinc-800 dark:text-yellow-50 h-6 border-t-transparent bg-transparent outline outline-none duration-500"
+          class="ml-1 h-6 w-full border-t-transparent bg-transparent text-lg font-medium text-zinc-800 outline-none outline duration-500 dark:text-yellow-50"
           v-model.trim="searchInput"
           name="search"
           autocomplete="off"
           placeholder="Поиск"
         />
-        <div class="spin-search hidden">
+        <div class="hidden">
           <div
-            class="float-right text-zinc-800 dark:text-yellow-50 text inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            class="float-right inline-block h-2 w-2 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-zinc-800 motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-yellow-50"
             role="status"
           >
             <span
@@ -64,19 +64,19 @@ const toggleColorTheme = () => {
       </div>
 
       <div
-        class="search-result bg-stone-100 dark:bg-zinc-800 rounded-b-3xl shadow-lg absolute w-40 z-10 transition duration-150 ease-in-out md:w-80 hidden"
+        class="absolute z-10 hidden w-40 rounded-b-3xl bg-stone-100 shadow-lg transition duration-150 ease-in-out dark:bg-zinc-800 md:w-80"
       >
         <hr class="" />
       </div>
     </div>
 
-    <div class="buttons-header flex items-center justify-center">
+    <div class="flex items-center justify-center">
       <button
         href=""
-        class="current-location-button flex justify-center items-center mr-4 bg-purple-600 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-purple-700 duration-300"
+        class="shadow-3xl mr-4 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-purple-600 duration-300 hover:bg-purple-700"
       >
         <svg
-          class="fill-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
+          class="h-8 w-8 fill-yellow-50 duration-500 dark:fill-zinc-900"
           viewBox="0 0 48 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -100,10 +100,10 @@ const toggleColorTheme = () => {
       <button
         v-if="currentTheme === 'white'"
         @click="toggleColorTheme()"
-        class="dark-theme-toggler-button flex justify-center items-center bg-zinc-600 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-zinc-700 duration-300"
+        class="dark-theme-toggler-button shadow-3xl flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-zinc-600 duration-300 hover:bg-zinc-700"
       >
         <svg
-          class="fill-current stroke-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
+          class="h-8 w-8 fill-yellow-50 duration-500 dark:fill-zinc-900"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -126,10 +126,10 @@ const toggleColorTheme = () => {
       <button
         v-if="currentTheme === 'dark'"
         @click="toggleColorTheme()"
-        class="white-theme-toggler-button flex justify-center items-center bg-orange-300 w-12 h-12 rounded-lg cursor-pointer shadow-3xl hover:bg-orange-400 duration-300"
+        class="shadow-3xl flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-orange-300 duration-300 hover:bg-orange-400"
       >
         <svg
-          class="fill-current text-yellow-50 dark:text-zinc-900 w-8 h-8 duration-500"
+          class="h-8 w-8 fill-yellow-50 duration-500 dark:fill-zinc-900"
           viewBox="-5.5 0 32 32"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"

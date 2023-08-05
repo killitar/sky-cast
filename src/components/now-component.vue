@@ -1,21 +1,21 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="bg-stone-100 dark:bg-zinc-800 rounded-2xl shadow-md p-6 w-full lg:w-3/4 duration-500"
+    class="w-full rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800 lg:w-3/4"
   >
-    <h2 class="text-zinc-800 dark:text-stone-100 text-xl duration-500">
+    <h2 class="text-xl text-zinc-800 duration-500 dark:text-stone-100">
       Сегодня
     </h2>
     <div
-      class="highlight-list flex flex-col md:grid md:grid-rows-1 md:grid-cols-2 md:gap-3 duration-500"
+      class="flex flex-col duration-500 md:grid md:grid-cols-2 md:grid-rows-1 md:gap-3"
     >
       <div
-        class="hightlight-card one mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl duration-500"
+        class="mt-5 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
       >
-        <h3 class="card-title text-zinc-700 text-xl mb-10">Качество воздуха</h3>
-        <div class="wrapper flex">
+        <h3 class="mb-10 text-xl text-zinc-700">Качество воздуха</h3>
+        <div class="flex">
           <svg
-            class="h-12 w-12 mr-7 fill-zinc-800 dark:fill-yellow-50 duration-500"
+            class="mr-7 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
             viewBox="0 -1 28 28"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,39 +52,39 @@
               </g>
             </g>
           </svg>
-          <ul class="card-list flex">
-            <li class="card-item mr-6">
-              <p class="text-zinc-700 font-normal text-xs duration-500">
+          <ul class="flex">
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700 duration-500">
                 PM <sub>2.5</sub>
               </p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
             </li>
-            <li class="card-item mr-6">
-              <p class="text-zinc-700 font-normal text-xs duration-500">
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700 duration-500">
                 SO <sub>2</sub>
               </p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
             </li>
-            <li class="card-item mr-6">
-              <p class="text-zinc-700 font-normal text-xs">NO <sub>2</sub></p>
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700">NO <sub>2</sub></p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
             </li>
-            <li class="card-item">
-              <p class="text-zinc-700 font-normal text-xs">O <sub>3</sub></p>
+            <li>
+              <p class="text-xs font-normal text-zinc-700">O <sub>3</sub></p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
@@ -93,13 +93,13 @@
         </div>
       </div>
       <div
-        class="hightlight-card mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl duration-500"
+        class="mt-5 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
       >
-        <h3 class="card-title text-zinc-700 text-xl mb-10">Восход, Закат</h3>
-        <div class="cark-list flex justify-between">
-          <div class="card-item flex items-center mb-8 md:mb-0 md:mr-12">
+        <h3 class="mb-10 text-xl text-zinc-700">Восход, Закат</h3>
+        <div class="flex justify-between">
+          <div class="mb-8 flex items-center md:mb-0 md:mr-12">
             <svg
-              class="h-12 w-12 mr-3 stroke-zinc-800 dark:stroke-yellow-50 duration-500"
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,18 +120,18 @@
               </g>
             </svg>
             <div>
-              <p class="text-zinc-700 font-normal text-xs">Восход</p>
+              <p class="text-xs font-normal text-zinc-700">Восход</p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
             </div>
           </div>
 
-          <div class="card-item flex items-center">
+          <div class="flex items-center">
             <svg
-              class="h-12 w-12 mr-3 stroke-zinc-800 dark:stroke-yellow-50 duration-500"
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -152,9 +152,9 @@
               </g>
             </svg>
             <div>
-              <p class="text-zinc-700 font-normal text-xs">Закат</p>
+              <p class="text-xs font-normal text-zinc-700">Закат</p>
               <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
               >
                 2
               </p>
@@ -164,150 +164,140 @@
       </div>
       <div class="flex">
         <div
-          class="hightlight-card w-1/2 mr-2 mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl h-40 duration-500"
+          class="mr-2 mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
         >
-          <h3 class="card-title text-zinc-700 text-xl mb-10">Видимость</h3>
+          <h3 class="mb-10 text-xl text-zinc-700">Видимость</h3>
 
-          <div class="card-list">
-            <div class="card-item flex justify-between items-center">
-              <svg
-                class="h-12 w-12 mr-3 fill-zinc-800 dark:fill-yellow-50 duration-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-                  ></path>
-                </g>
-              </svg>
-              <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
-              >
-                2 <sub>km</sub>
-              </p>
-            </div>
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-3 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sub>km</sub>
+            </p>
           </div>
         </div>
         <div
-          class="hightlight-card w-1/2 mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl h-40 duration-500"
+          class="mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
         >
-          <h3 class="card-title text-zinc-700 text-xl mb-4 xl:mb-10">
-            Ощущается как
-          </h3>
+          <h3 class="mb-4 text-xl text-zinc-700 xl:mb-10">Ощущается как</h3>
 
-          <div class="card-list">
-            <div class="card-item flex justify-between items-center">
-              <svg
-                class="h-12 w-12 mr-3 stroke-zinc-800 dark:stroke-yellow-50 duration-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M15 4H20M15 8H20M17 12H20M8 15.9998C7.44772 15.9998 7 16.4475 7 16.9998C7 17.5521 7.44772 17.9998 8 17.9998C8.55228 17.9998 9 17.5521 9 16.9998C9 16.4475 8.55228 15.9998 8 15.9998ZM8 15.9998V9M8 16.9998L8.00707 17.0069M12 16.9998C12 19.209 10.2091 20.9998 8 20.9998C5.79086 20.9998 4 19.209 4 16.9998C4 15.9854 4.37764 15.0591 5 14.354L5 6C5 4.34315 6.34315 3 8 3C9.65685 3 11 4.34315 11 6V14.354C11.6224 15.0591 12 15.9854 12 16.9998Z"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M15 4H20M15 8H20M17 12H20M8 15.9998C7.44772 15.9998 7 16.4475 7 16.9998C7 17.5521 7.44772 17.9998 8 17.9998C8.55228 17.9998 9 17.5521 9 16.9998C9 16.4475 8.55228 15.9998 8 15.9998ZM8 15.9998V9M8 16.9998L8.00707 17.0069M12 16.9998C12 19.209 10.2091 20.9998 8 20.9998C5.79086 20.9998 4 19.209 4 16.9998C4 15.9854 4.37764 15.0591 5 14.354L5 6C5 4.34315 6.34315 3 8 3C9.65685 3 11 4.34315 11 6V14.354C11.6224 15.0591 12 15.9854 12 16.9998Z"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </g>
-              </svg>
-              <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
-              >
-                2&deg;
-              </p>
-            </div>
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2&deg;
+            </p>
           </div>
         </div>
       </div>
       <div class="flex">
         <div
-          class="hightlight-card mr-2 mt-5 w-1/2 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl h-40 duration-500"
+          class="mr-2 mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
         >
-          <h3 class="card-title text-zinc-700 text-xl mb-10">Влажность</h3>
+          <h3 class="mb-10 text-xl text-zinc-700">Влажность</h3>
 
-          <div class="card-list">
-            <div class="card-item flex justify-between items-center">
-              <svg
-                class="h-12 w-12 mr-2 stroke-zinc-800 dark:stroke-yellow-50 duration-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M20 14.5714C20 18.7526 16.3364 22 12 22C7.66359 22 4 18.7526 4 14.5714C4 12 5.30472 9.45232 6.71637 7.42349C8.1468 5.36767 9.79177 3.69743 10.6777 2.85537M20 14.5714L10.6777 2.85537M20 14.5714C20 12 18.6953 9.45232 17.2836 7.42349C15.8532 5.36767 14.2082 3.69743 13.3223 2.85537C12.5778 2.14778 11.4222 2.14778 10.6777 2.85537M20 14.5714L10.6777 2.85537"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M12 18C11.4747 18 10.9546 17.8965 10.4693 17.6955C9.98396 17.4945 9.54301 17.1999 9.17157 16.8284C8.80014 16.457 8.5055 16.016 8.30448 15.5307C8.10346 15.0454 8 14.5253 8 14"
+                  stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M20 14.5714C20 18.7526 16.3364 22 12 22C7.66359 22 4 18.7526 4 14.5714C4 12 5.30472 9.45232 6.71637 7.42349C8.1468 5.36767 9.79177 3.69743 10.6777 2.85537M20 14.5714L10.6777 2.85537M20 14.5714C20 12 18.6953 9.45232 17.2836 7.42349C15.8532 5.36767 14.2082 3.69743 13.3223 2.85537C12.5778 2.14778 11.4222 2.14778 10.6777 2.85537M20 14.5714L10.6777 2.85537"
-                    stroke-width="2"
-                  ></path>
-                  <path
-                    d="M12 18C11.4747 18 10.9546 17.8965 10.4693 17.6955C9.98396 17.4945 9.54301 17.1999 9.17157 16.8284C8.80014 16.457 8.5055 16.016 8.30448 15.5307C8.10346 15.0454 8 14.5253 8 14"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  ></path>
-                </g>
-              </svg>
-              <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
-              >
-                2 <sup>%</sup>
-              </p>
-            </div>
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sup>%</sup>
+            </p>
           </div>
         </div>
         <div
-          class="hightlight-card w-1/2 mt-5 bg-stone-200 dark:bg-zinc-900 shadow-lg p-5 rounded-xl h-40 duration-500"
+          class="mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
         >
-          <h3 class="card-title text-zinc-700 text-xl mb-10">Давление</h3>
+          <h3 class="mb-10 text-xl text-zinc-700">Давление</h3>
 
-          <div class="card-list">
-            <div class="card-item flex justify-between items-center">
-              <svg
-                class="h-12 w-12 mr-2 stroke-zinc-800 dark:stroke-yellow-50 duration-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M21 18C21 18 19.8096 17.5305 19 17.3021C13.8797 15.8574 10.1203 20.1426 5 18.6979C4.19041 18.4695 3 18 3 18M21 12C21 12 19.8096 11.5305 19 11.3021C13.8797 9.85739 10.1203 14.1426 5 12.6979C4.19041 12.4695 3 12 3 12M21 6C21 6 19.8096 5.53048 19 5.30206C13.8797 3.85739 10.1203 8.14261 5 6.69794C4.19041 6.46952 3 6 3 6"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M21 18C21 18 19.8096 17.5305 19 17.3021C13.8797 15.8574 10.1203 20.1426 5 18.6979C4.19041 18.4695 3 18 3 18M21 12C21 12 19.8096 11.5305 19 11.3021C13.8797 9.85739 10.1203 14.1426 5 12.6979C4.19041 12.4695 3 12 3 12M21 6C21 6 19.8096 5.53048 19 5.30206C13.8797 3.85739 10.1203 8.14261 5 6.69794C4.19041 6.46952 3 6 3 6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </g>
-              </svg>
-              <p
-                class="text-zinc-800 dark:text-yellow-50 font-normal text-3xl duration-500"
-              >
-                2 <sup>hPa</sup>
-              </p>
-            </div>
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sup>hPa</sup>
+            </p>
           </div>
         </div>
       </div>

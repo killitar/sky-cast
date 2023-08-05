@@ -1,39 +1,37 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="p-6 mb-8 lg:mb-0 lg:mr-4 w-full h-1/3 lg:w-80 bg-stone-100 dark:bg-zinc-800 rounded-2xl shadow-md duration-500"
+    class="mb-8 h-1/3 w-full rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800 lg:mb-0 lg:mr-4 lg:w-80"
   >
     <h2
-      class="card-title font-medium text-zinc-800 dark:text-yellow-50 text-xl mb-4 duration-500"
+      class="mb-4 text-xl font-medium text-zinc-800 duration-500 dark:text-yellow-50"
     >
       Сейчас
     </h2>
-    <div class="wrapper flex justify-start items-center mb-4">
+    <div class="mb-4 flex items-center justify-start">
       <p
-        class="heading mr-6 text-zinc-700 dark:text-yellow-100 text-6xl font-bold duration-500"
+        class="mr-6 text-6xl font-bold text-zinc-700 duration-500 dark:text-yellow-100"
       >
         20&deg;<sup>C</sup>
       </p>
       <i
-        class="owf owf-800 owf-5x text-zinc-700 dark:text-yellow-100 duration-500"
+        class="owf owf-800 owf-5x text-zinc-700 duration-500 dark:text-yellow-100"
         alt="weather"
       ></i>
     </div>
-    <p class="text-zinc-800 dark:text-yellow-50 text-base mb-4 duration-500">
+    <p class="mb-4 text-sm text-zinc-800 duration-500 dark:text-yellow-50">
       Ясно
     </p>
-    <hr class="border-zinc-500 mb-3 w-2/6 lg:w-full duration-500" />
-    <ul class="meta-list">
-      <li class="meta-item flex items-center">
-        <span class="m-icon">
+    <hr class="mb-3 w-2/6 border-zinc-500 duration-500 lg:w-full" />
+    <ul>
+      <li class="flex items-center">
+        <span>
           <svg
-            class="fill-zinc-600 dark:fill-yellow-50 duration-500"
+            class="h-4 w-4 fill-zinc-600 duration-500 dark:fill-yellow-50"
             version="1.0"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="16px"
-            height="16px"
             viewBox="0 0 64 64"
             enable-background="new 0 0 64 64"
             xml:space="preserve"
@@ -87,14 +85,12 @@
           </svg>
         </span>
 
-        <p class="text text-zinc-500 ml-2 font-normal text-sm">10.20</p>
+        <p class="ml-2 text-sm font-normal text-zinc-500">10.20</p>
       </li>
-      <li class="meta-item flex items-center mt-2">
-        <span class="m-icon">
+      <li class="mt-2 flex items-center">
+        <span>
           <svg
-            class="fill-zinc-600 dark:fill-yellow-50 duration-500"
-            width="16px"
-            height="16px"
+            class="h-4 w-4 fill-zinc-600 duration-500 dark:fill-yellow-50"
             viewBox="0 0 32 32"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +108,7 @@
             </g>
           </svg>
         </span>
-        <p class="location-now ml-2 text-zinc-500">Москва,Россия</p>
+        <p class="ml-2 text-zinc-500">Москва,Россия</p>
       </li>
     </ul>
   </div>
