@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "white";
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+  ? 'dark'
+  : 'white';
 const searchInput = ref<string>();
 const currentTheme = ref<string>(theme);
 
 const toggleColorTheme = () => {
-  if (currentTheme.value === "white") {
-    currentTheme.value = "dark";
-    document.documentElement.classList.add("dark");
-    document.documentElement.classList.remove("white");
+  if (currentTheme.value === 'white') {
+    currentTheme.value = 'dark';
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('white');
   } else {
-    currentTheme.value = "white";
-    document.documentElement.classList.add("white");
-    document.documentElement.classList.remove("dark");
+    currentTheme.value = 'white';
+    document.documentElement.classList.add('white');
+    document.documentElement.classList.remove('dark');
   }
 };
 </script>

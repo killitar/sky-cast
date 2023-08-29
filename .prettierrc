@@ -1,4 +1,10 @@
 {
+  "arrowParents": "avoid",
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "semi": true,
+  "trailingComma": "es5",
+
   "pluginSearchDirs": ["."],
   "plugins": ["prettier-plugin-tailwindcss"]
 }

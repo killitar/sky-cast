@@ -1,40 +1,26 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="mb-8 h-1/3 w-full rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800 lg:mb-0 lg:mr-4 lg:w-80"
+    class="mb-8 rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800 lg:mb-4"
   >
-    <h2
-      class="mb-4 text-xl font-medium text-zinc-800 duration-500 dark:text-yellow-50"
-    >
-      Сейчас
+    <h2 class="text-xl text-zinc-800 duration-500 dark:text-stone-100">
+      Сегодня
     </h2>
-    <div class="mb-4 flex items-center justify-start">
-      <p
-        class="mr-6 text-6xl font-bold text-zinc-700 duration-500 dark:text-yellow-100"
+    <div
+      class="flex flex-col duration-500 md:grid md:grid-cols-2 md:grid-rows-1 md:gap-3"
+    >
+      <div
+        class="mt-5 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
       >
-        20&deg;<sup>C</sup>
-      </p>
-      <i
-        class="owf owf-800 owf-5x text-zinc-700 duration-500 dark:text-yellow-100"
-        alt="weather"
-      ></i>
-    </div>
-    <p class="mb-4 text-sm text-zinc-800 duration-500 dark:text-yellow-50">
-      Ясно
-    </p>
-    <hr class="mb-3 w-2/6 border-zinc-500 duration-500 lg:w-full" />
-    <ul>
-      <li class="flex items-center">
-        <span>
+        <h3 class="mb-10 text-xl text-zinc-700">Качество воздуха</h3>
+        <div class="flex">
           <svg
-            class="h-4 w-4 fill-zinc-600 duration-500 dark:fill-yellow-50"
-            version="1.0"
-            id="Layer_1"
+            class="mr-7 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
+            viewBox="0 -1 28 28"
+            version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 64 64"
-            enable-background="new 0 0 64 64"
-            xml:space="preserve"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -43,73 +29,278 @@
               stroke-linejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
-              <g>
-                <path
-                  d="M11,54h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C10,53.553,10.447,54,11,54 z M12,49h4v3h-4V49z"
-                ></path>
-                <path
-                  d="M23,54h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C22,53.553,22.447,54,23,54 z M24,49h4v3h-4V49z"
-                ></path>
-                <path
-                  d="M35,54h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C34,53.553,34.447,54,35,54 z M36,49h4v3h-4V49z"
-                ></path>
-                <path
-                  d="M11,43h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C10,42.553,10.447,43,11,43 z M12,38h4v3h-4V38z"
-                ></path>
-                <path
-                  d="M23,43h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C22,42.553,22.447,43,23,43 z M24,38h4v3h-4V38z"
-                ></path>
-                <path
-                  d="M35,43h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C34,42.553,34.447,43,35,43 z M36,38h4v3h-4V38z"
-                ></path>
-                <path
-                  d="M47,43h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C46,42.553,46.447,43,47,43 z M48,38h4v3h-4V38z"
-                ></path>
-                <path
-                  d="M11,32h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C10,31.553,10.447,32,11,32 z M12,27h4v3h-4V27z"
-                ></path>
-                <path
-                  d="M23,32h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C22,31.553,22.447,32,23,32 z M24,27h4v3h-4V27z"
-                ></path>
-                <path
-                  d="M35,32h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C34,31.553,34.447,32,35,32 z M36,27h4v3h-4V27z"
-                ></path>
-                <path
-                  d="M47,32h6c0.553,0,1-0.447,1-1v-5c0-0.553-0.447-1-1-1h-6c-0.553,0-1,0.447-1,1v5C46,31.553,46.447,32,47,32 z M48,27h4v3h-4V27z"
-                ></path>
-                <path
-                  d="M60,4h-7V3c0-1.657-1.343-3-3-3s-3,1.343-3,3v1H17V3c0-1.657-1.343-3-3-3s-3,1.343-3,3v1H4 C1.789,4,0,5.789,0,8v52c0,2.211,1.789,4,4,4h56c2.211,0,4-1.789,4-4V8C64,5.789,62.211,4,60,4z M49,3c0-0.553,0.447-1,1-1 s1,0.447,1,1v3v4c0,0.553-0.447,1-1,1s-1-0.447-1-1V6V3z M13,3c0-0.553,0.447-1,1-1s1,0.447,1,1v3v4c0,0.553-0.447,1-1,1 s-1-0.447-1-1V6V3z M62,60c0,1.104-0.896,2-2,2H4c-1.104,0-2-0.896-2-2V17h60V60z M62,15H2V8c0-1.104,0.896-2,2-2h7v4 c0,1.657,1.343,3,3,3s3-1.343,3-3V6h30v4c0,1.657,1.343,3,3,3s3-1.343,3-3V6h7c1.104,0,2,0.896,2,2V15z"
-                ></path>
+              <title>wind</title>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill-rule="evenodd"
+                sketch:type="MSPage"
+              >
+                <g
+                  id="Icon-Set"
+                  sketch:type="MSLayerGroup"
+                  transform="translate(-466.000000, -830.000000)"
+                >
+                  <path
+                    d="M488,844 L467,844 C466.447,844 466,844.447 466,845 C466,845.553 466.447,846 467,846 L486.833,846 C489.687,846 492,847.791 492,850 C492,852.209 490.291,854 486,854 L486,856 L488,856 C491.313,856 494,853.313 494,850 C494,846.687 491.313,844 488,844 L488,844 Z M480.002,848 L480,848 L472,848 C471.447,848 471,848.448 471,849 C471,849.553 471.447,850 472,850 L480,850 C481.104,850 482,850.896 482,852 C482,853.104 481.104,854 480,854 L480,856 C482.209,856 484,854.209 484,852 C484,849.792 482.21,848.002 480.002,848 L480.002,848 Z M475,838 L487,838 C487.553,838 488,837.553 488,837 C488,836.448 487.553,836 487,836 L475,836 C474.447,836 474,836.448 474,837 C474,837.553 474.447,838 475,838 L475,838 Z M470,842 L488,842 C491.313,842 494,839.313 494,836 C494,832.687 491.313,830 488,830 L488,832 C490.822,832.531 492,833.791 492,836 C492,838.209 489.687,840 486.833,840 L470,840 C469.447,840 469,840.448 469,841 C469,841.553 469.447,842 470,842 L470,842 Z"
+                    id="wind"
+                    sketch:type="MSShapeGroup"
+                  ></path>
+                </g>
               </g>
             </g>
           </svg>
-        </span>
+          <ul class="flex">
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700 duration-500">
+                PM <sub>2.5</sub>
+              </p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </li>
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700 duration-500">
+                SO <sub>2</sub>
+              </p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </li>
+            <li class="mr-6">
+              <p class="text-xs font-normal text-zinc-700">NO <sub>2</sub></p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </li>
+            <li>
+              <p class="text-xs font-normal text-zinc-700">O <sub>3</sub></p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-5 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
+      >
+        <h3 class="mb-10 text-xl text-zinc-700">Восход, Закат</h3>
+        <div class="flex justify-between">
+          <div class="flex items-center md:mb-0 md:mr-12">
+            <svg
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 10V3M12 3L9 6M12 3L15 6M6 12L5 11M18 12L19 11M3 18H21M5 21H19M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <div>
+              <p class="text-xs font-normal text-zinc-700">Восход</p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </div>
+          </div>
 
-        <p class="ml-2 text-sm font-normal text-zinc-500">10.20</p>
-      </li>
-      <li class="mt-2 flex items-center">
-        <span>
-          <svg
-            class="h-4 w-4 fill-zinc-600 duration-500 dark:fill-yellow-50"
-            viewBox="0 0 32 32"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"
-              ></path>
-            </g>
-          </svg>
-        </span>
-        <p class="ml-2 text-zinc-500">Москва,Россия</p>
-      </li>
-    </ul>
+          <div class="flex items-center">
+            <svg
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M6 12L5 11M18 12L19 11M3 18H21M5 21H19M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18M12 3V10M12 10L15 7M12 10L9 7"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <div>
+              <p class="text-xs font-normal text-zinc-700">Закат</p>
+              <p
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              >
+                2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div
+          class="mr-2 mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
+        >
+          <h3 class="mb-10 text-xl text-zinc-700">Видимость</h3>
+
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-3 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sub>km</sub>
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
+        >
+          <h3 class="mb-4 text-xl text-zinc-700 xl:mb-10">Ощущается как</h3>
+
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M15 4H20M15 8H20M17 12H20M8 15.9998C7.44772 15.9998 7 16.4475 7 16.9998C7 17.5521 7.44772 17.9998 8 17.9998C8.55228 17.9998 9 17.5521 9 16.9998C9 16.4475 8.55228 15.9998 8 15.9998ZM8 15.9998V9M8 16.9998L8.00707 17.0069M12 16.9998C12 19.209 10.2091 20.9998 8 20.9998C5.79086 20.9998 4 19.209 4 16.9998C4 15.9854 4.37764 15.0591 5 14.354L5 6C5 4.34315 6.34315 3 8 3C9.65685 3 11 4.34315 11 6V14.354C11.6224 15.0591 12 15.9854 12 16.9998Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2&deg;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div
+          class="mr-2 mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
+        >
+          <h3 class="mb-10 text-xl text-zinc-700">Влажность</h3>
+
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M20 14.5714C20 18.7526 16.3364 22 12 22C7.66359 22 4 18.7526 4 14.5714C4 12 5.30472 9.45232 6.71637 7.42349C8.1468 5.36767 9.79177 3.69743 10.6777 2.85537M20 14.5714L10.6777 2.85537M20 14.5714C20 12 18.6953 9.45232 17.2836 7.42349C15.8532 5.36767 14.2082 3.69743 13.3223 2.85537C12.5778 2.14778 11.4222 2.14778 10.6777 2.85537M20 14.5714L10.6777 2.85537"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M12 18C11.4747 18 10.9546 17.8965 10.4693 17.6955C9.98396 17.4945 9.54301 17.1999 9.17157 16.8284C8.80014 16.457 8.5055 16.016 8.30448 15.5307C8.10346 15.0454 8 14.5253 8 14"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sup>%</sup>
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
+        >
+          <h3 class="mb-10 text-xl text-zinc-700">Давление</h3>
+
+          <div class="flex items-center justify-between">
+            <svg
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M21 18C21 18 19.8096 17.5305 19 17.3021C13.8797 15.8574 10.1203 20.1426 5 18.6979C4.19041 18.4695 3 18 3 18M21 12C21 12 19.8096 11.5305 19 11.3021C13.8797 9.85739 10.1203 14.1426 5 12.6979C4.19041 12.4695 3 12 3 12M21 6C21 6 19.8096 5.53048 19 5.30206C13.8797 3.85739 10.1203 8.14261 5 6.69794C4.19041 6.46952 3 6 3 6"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <p
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+            >
+              2 <sup>hPa</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
