@@ -7,8 +7,8 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "sky-cast",
-    "version": "0.0.0"
+    "productName": "Sky Cast",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -37,7 +37,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "SkyCast",
+        "title": "Sky Cast",
         "width": 800,
         "height": 600
       }
