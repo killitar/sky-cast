@@ -15,7 +15,7 @@
         <h3 class="mb-10 text-xl text-zinc-700">Качество воздуха</h3>
         <div class="flex">
           <svg
-            class="mr-7 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
+            class="mr-7 h-12 w-12 fill-zinc-800 duration-500 dark:fill-stone-50"
             viewBox="0 -1 28 28"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@
                 PM <sub>2.5</sub>
               </p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
                 2
               </p>
@@ -68,7 +68,7 @@
                 SO <sub>2</sub>
               </p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
                 2
               </p>
@@ -76,7 +76,7 @@
             <li class="mr-6">
               <p class="text-xs font-normal text-zinc-700">NO <sub>2</sub></p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
                 2
               </p>
@@ -84,7 +84,7 @@
             <li>
               <p class="text-xs font-normal text-zinc-700">O <sub>3</sub></p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
                 2
               </p>
@@ -99,7 +99,7 @@
         <div class="flex justify-between">
           <div class="flex items-center md:mb-0 md:mr-12">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -122,16 +122,16 @@
             <div>
               <p class="text-xs font-normal text-zinc-700">Восход</p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                2:30
               </p>
             </div>
           </div>
 
           <div class="flex items-center">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -154,9 +154,9 @@
             <div>
               <p class="text-xs font-normal text-zinc-700">Закат</p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                2:30
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-3 h-12 w-12 fill-zinc-800 duration-500 dark:fill-yellow-50"
+              class="mr-3 h-12 w-12 fill-zinc-800 duration-500 dark:fill-stone-50"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -187,7 +187,7 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
               2 <sub>km</sub>
             </p>
@@ -200,7 +200,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +221,7 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
               2&deg;
             </p>
@@ -236,7 +236,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +260,7 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
               2 <sup>%</sup>
             </p>
@@ -273,7 +273,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-yellow-50"
+              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +294,7 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-yellow-50"
+              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
               2 <sup>hPa</sup>
             </p>

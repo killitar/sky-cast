@@ -6,9 +6,11 @@ A weather app builded with Vue & Tauri
 
 - [TypeScript](https://www.typescriptlang.org/): A typed JavaScript
 
-- [Vue](https://vuejs.org/): A JavaScript Framework, performant and versatile framework for building web user interfaces.
+- [Vue](https://vuejs.org/): A performant and versatile JavaScript framework for building web user interfaces
 
 - [Vite](https://vitejs.dev/): A fast build tool
+
+- [Pinia](https://pinia.vuejs.org/): A light,intuitive store for Vue.js
 
 - [TailwindCSS](https://tailwindcss.com/): A CSS framework for building UI
 
@@ -22,6 +24,7 @@ A weather app builded with Vue & Tauri
 
 ```sh
 git clone https://github.com/Killitar/sky-cast.git
+cd sky-cast
 pnpm install
 pnpm tauri dev
 ```

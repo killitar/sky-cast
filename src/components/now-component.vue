@@ -10,12 +10,12 @@
     </h2>
     <div class="mb-4 flex items-center justify-start">
       <p
-        class="mr-6 text-6xl font-bold text-zinc-700 duration-500 dark:text-yellow-100"
+        class="mr-6 text-6xl font-bold text-zinc-700 duration-500 dark:text-stone-50"
       >
         20&deg;<sup>C</sup>
       </p>
       <i
-        class="owf owf-800 owf-5x text-zinc-700 duration-500 dark:text-yellow-100"
+        class="owf owf-800 owf-5x text-zinc-700 duration-500 dark:text-stone-50"
         alt="weather"
       ></i>
     </div>
