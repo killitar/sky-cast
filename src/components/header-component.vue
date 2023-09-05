@@ -1,23 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useThemeStore } from '../store/themeStore.ts';
 
-const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-  ? 'dark'
-  : 'white';
-const searchInput = ref<string>();
-const currentTheme = ref<string>(theme);
-
-const toggleColorTheme = () => {
-  if (currentTheme.value === 'white') {
-    currentTheme.value = 'dark';
-    document.documentElement.classList.add('dark');
-    document.documentElement.classList.remove('white');
-  } else {
-    currentTheme.value = 'white';
-    document.documentElement.classList.add('white');
-    document.documentElement.classList.remove('dark');
-  }
-};
+const themeStore = useThemeStore();
 </script>
 <template>
   <div class="mb-7 flex items-center justify-between">
@@ -46,7 +30,6 @@ const toggleColorTheme = () => {
         </svg>
         <input
           class="ml-1 h-6 w-full border-t-transparent bg-transparent text-lg font-medium text-zinc-800 outline-none outline duration-500 dark:text-yellow-50"
-          v-model.trim="searchInput"
           name="search"
           autocomplete="off"
           placeholder="Поиск"
@@ -98,8 +81,8 @@ const toggleColorTheme = () => {
       </button>
 
       <button
-        v-if="currentTheme === 'white'"
-        @click="toggleColorTheme()"
+        v-if="themeStore.currentTheme === 'white'"
+        @click="themeStore.toggleColorTheme()"
         class="dark-theme-toggler-button shadow-3xl flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-zinc-600 duration-300 hover:bg-zinc-700"
       >
         <svg
@@ -124,8 +107,8 @@ const toggleColorTheme = () => {
         </svg>
       </button>
       <button
-        v-if="currentTheme === 'dark'"
-        @click="toggleColorTheme()"
+        v-if="themeStore.currentTheme === 'dark'"
+        @click="themeStore.toggleColorTheme()"
         class="shadow-3xl flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-orange-300 duration-300 hover:bg-orange-400"
       >
         <svg

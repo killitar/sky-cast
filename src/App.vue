@@ -1,22 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import HeaderComponent from './components/header-component.vue';
 import TodayComponent from './components/today-component.vue';
 import NowComponent from './components/now-component.vue';
 import HourlyComponent from './components/hourly-forecast-component.vue';
 import DailyComponent from './components/daily-forecast-component.vue';
-
-const checkTheme = () => {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-};
-
-onMounted(() => {
-  checkTheme();
-});
 </script>
 
 <template>
