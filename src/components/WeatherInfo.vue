@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  pm?: string;
+  so2?: string;
+  no?: string;
+  o3?: string;
+
+  visibility?: number;
+  feels?: number;
+  humidity?: number;
+  pressure?: number;
+  sunset?: string;
+  sunrise?: string;
+}>();
+</script>
 <template>
   <div
     class="mb-8 rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800 lg:mb-4"
@@ -15,7 +29,7 @@
         <h3 class="mb-10 text-xl text-zinc-700">Качество воздуха</h3>
         <div class="flex">
           <svg
-            class="mr-7 h-12 w-12 fill-zinc-800 duration-500 dark:fill-stone-50"
+            class="mr-7 h-10 w-10 fill-zinc-800 duration-500 dark:fill-stone-50 lg:h-12 lg:w-12"
             viewBox="0 -1 28 28"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,15 +66,15 @@
               </g>
             </g>
           </svg>
-          <ul class="flex">
+          <ul class="flex items-center justify-between">
             <li class="mr-6">
               <p class="text-xs font-normal text-zinc-700 duration-500">
                 PM <sub>2.5</sub>
               </p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                {{ pm }}
               </p>
             </li>
             <li class="mr-6">
@@ -68,25 +82,25 @@
                 SO <sub>2</sub>
               </p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                {{ so2 }}
               </p>
             </li>
             <li class="mr-6">
               <p class="text-xs font-normal text-zinc-700">NO <sub>2</sub></p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                {{ so2 }}
               </p>
             </li>
             <li>
               <p class="text-xs font-normal text-zinc-700">O <sub>3</sub></p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2
+                {{ o3 }}
               </p>
             </li>
           </ul>
@@ -99,7 +113,7 @@
         <div class="flex justify-between">
           <div class="flex items-center md:mb-0 md:mr-12">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
+              class="mr-3 h-10 w-10 stroke-zinc-800 duration-500 dark:stroke-stone-50 lg:h-12 lg:w-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -122,16 +136,16 @@
             <div>
               <p class="text-xs font-normal text-zinc-700">Восход</p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2:30
+                {{ sunrise }}
               </p>
             </div>
           </div>
 
           <div class="flex items-center">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
+              class="mr-3 h-10 w-10 stroke-zinc-800 duration-500 dark:stroke-stone-50 lg:h-12 lg:w-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -154,9 +168,9 @@
             <div>
               <p class="text-xs font-normal text-zinc-700">Закат</p>
               <p
-                class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+                class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                2:30
+                {{ sunset }}
               </p>
             </div>
           </div>
@@ -170,7 +184,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-3 h-12 w-12 fill-zinc-800 duration-500 dark:fill-stone-50"
+              class="mr-3 h-10 w-10 fill-zinc-800 duration-500 dark:fill-stone-50 lg:h-12 lg:w-12"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -187,20 +201,20 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+              class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
-              2 <sub>km</sub>
+              {{ visibility }} <sub>km</sub>
             </p>
           </div>
         </div>
         <div
           class="mt-5 h-40 w-1/2 rounded-xl bg-stone-200 p-5 shadow-lg duration-500 dark:bg-zinc-900"
         >
-          <h3 class="mb-4 text-xl text-zinc-700 xl:mb-10">Ощущается как</h3>
+          <h3 class="mb-10 text-xl text-zinc-700">Ощущается</h3>
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-3 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
+              class="mr-3 h-10 w-10 stroke-zinc-800 duration-500 dark:stroke-stone-50 lg:h-12 lg:w-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -221,9 +235,9 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+              class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
-              2&deg;
+              {{ feels }} &deg;C
             </p>
           </div>
         </div>
@@ -236,7 +250,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
+              class="mr-2 h-10 w-10 stroke-zinc-800 duration-500 dark:stroke-stone-50 lg:h-12 lg:w-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -260,9 +274,9 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+              class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
-              2 <sup>%</sup>
+              {{ humidity }} <sup>%</sup>
             </p>
           </div>
         </div>
@@ -273,7 +287,7 @@
 
           <div class="flex items-center justify-between">
             <svg
-              class="mr-2 h-12 w-12 stroke-zinc-800 duration-500 dark:stroke-stone-50"
+              class="mr-2 h-10 w-10 stroke-zinc-800 duration-500 dark:stroke-stone-50 lg:h-12 lg:w-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -294,9 +308,9 @@
               </g>
             </svg>
             <p
-              class="text-3xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
+              class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
             >
-              2 <sup>hPa</sup>
+              {{ pressure }} <sup>hPa</sup>
             </p>
           </div>
         </div>

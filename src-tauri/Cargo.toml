@@ -3,7 +3,7 @@ name = "sky-cast"
 version = "0.0.0"
 description = "A Tauri App"
 authors = ["kilitar,kokos"]
-license = ""
+license = "MIT"
 repository = ""
 edition = "2021"
 

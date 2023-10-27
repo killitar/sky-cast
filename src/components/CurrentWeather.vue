@@ -1,4 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  name?: string;
+  country?: string;
+  temperature?: number;
+  condition_text?: string;
+
+  date?: string;
+  icon?: string;
+}>();
+</script>
 <template>
   <div
     class="mb-8 rounded-2xl bg-stone-100 p-6 shadow-md duration-500 dark:bg-zinc-800"
@@ -10,19 +20,20 @@
     </h2>
     <div class="mb-4 flex items-center justify-start">
       <p
-        class="mr-6 text-6xl font-bold text-zinc-700 duration-500 dark:text-stone-50"
+        class="mr-6 text-5xl font-bold text-zinc-700 duration-500 dark:text-stone-50 lg:text-3xl xl:text-4xl"
       >
-        20&deg;<sup>C</sup>
+        {{ temperature }}&deg;<sup>C</sup>
       </p>
-      <i
-        class="owf owf-800 owf-5x text-zinc-700 duration-500 dark:text-stone-50"
-        alt="weather"
-      ></i>
+      <img
+        :src="`./weatherIcon/${props.icon}.svg`"
+        :alt="condition_text"
+        class="w-32 lg:w-20 xl:w-32"
+      />
     </div>
     <p class="mb-4 text-sm text-zinc-800 duration-500 dark:text-yellow-50">
-      Ясно
+      {{ condition_text }}
     </p>
-    <hr class="mb-3 w-2/6 border-zinc-500 duration-500 lg:w-full" />
+    <hr class="mb-3 w-full border-zinc-500 duration-500" />
     <ul>
       <li class="flex items-center">
         <span>
@@ -85,7 +96,7 @@
           </svg>
         </span>
 
-        <p class="ml-2 text-sm font-normal text-zinc-500">10.20</p>
+        <p class="ml-2 text-sm font-normal text-zinc-500">{{ date }}</p>
       </li>
       <li class="mt-2 flex items-center">
         <span>
@@ -108,7 +119,7 @@
             </g>
           </svg>
         </span>
-        <p class="ml-2 text-zinc-500">Москва,Россия</p>
+        <p class="ml-2 text-zinc-500">{{ name }},{{ country }}</p>
       </li>
     </ul>
   </div>

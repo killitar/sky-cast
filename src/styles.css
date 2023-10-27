@@ -1,5 +1,5 @@
-@import url('./css/owfont-regular.min.css');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +11,7 @@ body::-webkit-scrollbar {
 
 body {
   font-family:
+    'Noto Sans',
     system-ui,
     -apple-system,
     BlinkMacSystemFont,

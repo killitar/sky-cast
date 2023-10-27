@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { useWeatherStore } from '../store/weatherStore';
+import { getHours } from '../utils/dateUtils';
+
+const {forecastHourly, weatherData} = storeToRefs(useWeatherStore());
+</script>
 <template>
   <div>
     <h2 class="mb-4 text-xl text-zinc-800 duration-500 dark:text-white">
@@ -9,20 +15,20 @@
         class="container-snap flex touch-auto gap-3 overflow-auto scroll-smooth duration-500"
       >
         <li
-          v-for="n in 8"
+          v-for="(weather, index) in forecastHourly"
+          :key="index"
           class="flex flex-col items-center rounded-xl bg-stone-100 px-6 py-4 duration-500 dark:bg-zinc-800"
         >
-          <p
-            class="mb-6 text-center text-zinc-700 duration-500 dark:text-stone-100"
-          >
-            1:00
+          <p class="text-center text-zinc-700 duration-500 dark:text-stone-100">
+            {{ getHours(weather?.dt, weatherData?.timezone) }}:00
           </p>
-          <i
-            alt="cloudy"
-            class="owf owf-800 owf-4x h-20 w-20 text-center text-zinc-700 duration-500 dark:text-stone-50"
-          ></i>
+          <img
+            :alt="weather?.weather[0].description"
+            :src="`./weatherIcon/${weather?.weather[0].icon}.svg`"
+            class="h-28 w-28"
+          />
           <p class="text-center text-zinc-700 duration-500 dark:text-yellow-50">
-            20&deg;
+            {{ parseInt(weather?.main.temp) }}&deg;
           </p>
         </li>
       </ul>
