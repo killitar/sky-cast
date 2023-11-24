@@ -11,4 +11,4 @@ interface Location {
   state?: string;
 }
 
-export default Location;
+export default LocationDataResponse;

@@ -1,6 +1,6 @@
 [package]
 name = "sky-cast"
-version = "0.0.0"
+version = "1.0.0"
 description = "A Tauri App"
 authors = ["kilitar,kokos"]
 license = "MIT"
@@ -13,7 +13,7 @@ edition = "2021"
 tauri-build = { version = "1.4", features = [] }
 
 [dependencies]
-tauri = { version = "1.4", features = ["shell-open"] }
+tauri = { version = "1.4", features = [ "http-all", "app-all", "notification-all", "shell-open"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 

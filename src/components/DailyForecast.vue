@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useWeatherStore } from '../store/weatherStore';
 import { getWeekDay, getDate, getMonth } from '../utils/dateUtils';
 
-const {forecastDaily} = storeToRefs( useWeatherStore());
+const { forecastDaily } = storeToRefs(useWeatherStore());
 </script>
 <template>
   <div class="mb-8 lg:mb-4">

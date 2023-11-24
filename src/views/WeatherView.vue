@@ -7,7 +7,7 @@ import HourlyForecast from '../components/HourlyForecast.vue';
 import { storeToRefs } from 'pinia';
 import { useWeatherStore } from '../store/weatherStore.ts';
 
-import { useWeatherData } from '../hooks/useWeatherData';
+import { useFormattedWeatherData } from '../hooks/useFormattedWeatherData';
 
 const { weatherData } = storeToRefs(useWeatherStore());
 
@@ -22,7 +22,7 @@ const {
   formattedSunset,
   roundedVisibility,
   roundedFellsLike,
-} = useWeatherData();
+} = useFormattedWeatherData();
 </script>
 
 <template>
@@ -49,7 +49,7 @@ const {
         <WeatherInfo
           :pm="roundedPM"
           :so2="roundedSO2"
-          :no="roundedNO"
+          :no2="roundedNO"
           :o3="roundedO3"
           :visibility="roundedVisibility"
           :feels="roundedFellsLike"

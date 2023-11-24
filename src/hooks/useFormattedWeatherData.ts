@@ -3,7 +3,7 @@ import { useWeatherStore } from '../store/weatherStore';
 import { getFormattedDate, getTime } from '../utils/dateUtils';
 import { roundNumber } from '../utils/numberUtils';
 
-export function useWeatherData() {
+export function useFormattedWeatherData() {
   const weatherStore = useWeatherStore();
 
   const roundedTemperature = computed(() => {

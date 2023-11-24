@@ -1,24 +1,21 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-import axios from 'axios';
+import { fetch } from '@tauri-apps/api/http';
 
 import { debounce } from '../utils/debounce';
 
-import Location from '../interfaces/Location';
-import WeatherData from '../interfaces/WeatherData';
-import {
-  AirPollutionData,
-  AirPollutionDataResponse,
-} from '../interfaces/AirPollutionData';
+import LocationDataRespons from '../interfaces/Location';
+import WeatherDataResponse from '../interfaces/WeatherData';
+import { AirPollutionDataResponse } from '../interfaces/AirPollutionData';
+import ForecastDataRespose from '../interfaces/ForecastResponse';
 
-const apiKey = import.meta.env.VITE_APP_WEATHER_API_KEY;
+const apiKey = '6199dc390cf859e69c70b175df0169a6';
 const baseUrl = 'http://api.openweathermap.org';
 
 export const useWeatherStore = defineStore('weather', () => {
-
-  const autocompleteData = ref<Location | undefined>();
-  const weatherData = ref<WeatherData | undefined>();
-  const airPollutionData = ref<AirPollutionData | undefined>();
+  const autocompleteData = ref();
+  const weatherData = ref();
+  const airPollutionData = ref();
   const forecastDaily = ref();
   const forecastHourly = ref();
 
@@ -28,7 +25,7 @@ export const useWeatherStore = defineStore('weather', () => {
     try {
       if (input !== '') {
         isLoading.value = true;
-        const res = await axios.get<Location>(
+        const res = await fetch<LocationDataRespons>(
           `${baseUrl}/geo/1.0/direct?appid=${apiKey}&q=${input}&limit=3`
         );
         autocompleteData.value = res.data;
@@ -36,25 +33,24 @@ export const useWeatherStore = defineStore('weather', () => {
         autocompleteData.value = undefined; // Установка в undefined, когда ввод пуст
       }
     } catch (error) {
-      console.error('Ошибка при выполнении автозаполнения', error);
+      console.error('Ошибка:', error);
     } finally {
       isLoading.value = false;
     }
   };
 
-
   const fetchData = async (lat: number, lon: number, type: string) => {
     try {
       if (type === 'weather') {
         isLoading.value = true;
-        const res = await axios.get<WeatherData>(
+        const res = await fetch<WeatherDataResponse>(
           `${baseUrl}/data/2.5/${type}?appid=${apiKey}&lat=${lat}&lon=${lon}&lang=ru&units=metric`
         );
         weatherData.value = res.data;
         isLoading.value = false;
       } else if (type === 'air_pollution') {
         isLoading.value = true;
-        const res = await axios.get<AirPollutionDataResponse>(
+        const res = await fetch<AirPollutionDataResponse>(
           `${baseUrl}/data/2.5/${type}?appid=${apiKey}&lat=${lat}&lon=${lon}&lang=ru&units=metric`
         );
         res.data.list.map((item) => {
@@ -64,7 +60,7 @@ export const useWeatherStore = defineStore('weather', () => {
       } else if (type === 'forecast') {
         isLoading.value = true;
 
-        const res = await axios.get(
+        const res = await fetch<ForecastDataRespose>(
           `${baseUrl}/data/2.5/${type}?appid=${apiKey}&lat=${lat}&lon=${lon}&lang=ru&units=metric`
         );
 
@@ -82,7 +78,7 @@ export const useWeatherStore = defineStore('weather', () => {
         isLoading.value = false;
       }
     } catch (error) {
-      const errorMessage = 'Error in fetch data weather';
+      const errorMessage = 'Ошибка:';
       console.error(errorMessage, error);
     }
   };

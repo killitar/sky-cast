@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   pm?: string;
   so2?: string;
-  no?: string;
+  no2?: string;
   o3?: string;
 
   visibility?: number;
@@ -92,7 +92,7 @@ const props = defineProps<{
               <p
                 class="text-2xl font-normal text-zinc-800 duration-500 dark:text-stone-50"
               >
-                {{ so2 }}
+                {{ no2 }}
               </p>
             </li>
             <li>
