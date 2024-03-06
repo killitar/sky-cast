@@ -4,10 +4,10 @@ import { fetch } from '@tauri-apps/api/http';
 
 import { debounce } from '../utils/debounce';
 
-import LocationDataRespons from '../interfaces/Location';
+import LocationDataResponse from '../interfaces/Location';
 import WeatherDataResponse from '../interfaces/WeatherData';
 import { AirPollutionDataResponse } from '../interfaces/AirPollutionData';
-import ForecastDataRespose from '../interfaces/ForecastResponse';
+import ForecastDataResponse from '../interfaces/ForecastResponse';
 
 const apiKey = '6199dc390cf859e69c70b175df0169a6';
 const baseUrl = 'http://api.openweathermap.org';
@@ -25,7 +25,7 @@ export const useWeatherStore = defineStore('weather', () => {
     try {
       if (input !== '') {
         isLoading.value = true;
-        const res = await fetch<LocationDataRespons>(
+        const res = await fetch<LocationDataResponse>(
           `${baseUrl}/geo/1.0/direct?appid=${apiKey}&q=${input}&limit=3`
         );
         autocompleteData.value = res.data;
@@ -60,7 +60,7 @@ export const useWeatherStore = defineStore('weather', () => {
       } else if (type === 'forecast') {
         isLoading.value = true;
 
-        const res = await fetch<ForecastDataRespose>(
+        const res = await fetch<ForecastDataResponse>(
           `${baseUrl}/data/2.5/${type}?appid=${apiKey}&lat=${lat}&lon=${lon}&lang=ru&units=metric`
         );
 
@@ -83,7 +83,7 @@ export const useWeatherStore = defineStore('weather', () => {
     }
   };
 
-  const debouncedAutoComplete = debounce(handleAutoCompleteData, 400);
+  const debouncedAutoComplete = debounce(handleAutoCompleteData, 1000);
 
   const fetchWeather = (lat: number, lon: number) => {
     fetchData(lat, lon, 'weather');
