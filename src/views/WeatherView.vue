@@ -1,28 +1,69 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { storeToRefs } from 'pinia';
+
+import { useWeatherStore } from '../store/weatherStore.ts';
+import { getFormattedDate, getTime } from '../utils/dateUtils';
+import { roundNumber } from '../utils/numberUtils';
+
 import Header from '../components/HeaderComponent.vue';
 import CurrentWeather from '../components/CurrentWeather.vue';
 import DailyForecast from '../components/DailyForecast.vue';
 import WeatherInfo from '../components/WeatherInfo.vue';
 import HourlyForecast from '../components/HourlyForecast.vue';
-import { storeToRefs } from 'pinia';
-import { useWeatherStore } from '../store/weatherStore.ts';
 
-import { useFormattedWeatherData } from '../hooks/useFormattedWeatherData';
+const { weatherData, airPollutionData } = storeToRefs(useWeatherStore());
 
-const { weatherData } = storeToRefs(useWeatherStore());
+const roundedTemperature = computed(() => {
+  const temperature = weatherData.value?.main.temp;
+  if (typeof temperature === 'number') {
+    return Math.round(temperature);
+  }
+  return 0;
+});
 
-const {
-  roundedTemperature,
-  formattedDate,
-  roundedPM,
-  roundedSO2,
-  roundedNO,
-  roundedO3,
-  formattedSunrise,
-  formattedSunset,
-  roundedVisibility,
-  roundedFellsLike,
-} = useFormattedWeatherData();
+const formattedDate = computed(() =>
+  getFormattedDate(weatherData.value?.dt, weatherData.value?.timezone)
+);
+
+const roundedPM = computed(() =>
+  roundNumber(airPollutionData.value?.components.pm2_5)
+);
+
+const roundedSO2 = computed(() =>
+  roundNumber(airPollutionData.value?.components.so2)
+);
+
+const roundedNO = computed(() =>
+  roundNumber(airPollutionData.value?.components.no)
+);
+
+const roundedO3 = computed(() =>
+  roundNumber(airPollutionData.value?.components.o3)
+);
+
+const formattedSunrise = computed(() =>
+  getTime(weatherData.value?.sys.sunrise, weatherData.value?.timezone)
+);
+
+const formattedSunset = computed(() =>
+  getTime(weatherData.value?.sys.sunset, weatherData.value?.timezone)
+);
+
+const roundedVisibility = computed(() => {
+  if (weatherData.value) {
+    return weatherData.value.visibility / 1000;
+  }
+  return 0;
+});
+
+const roundedFellsLike = computed(() => {
+  const feelsLike = weatherData.value?.main.feels_like;
+  if (typeof feelsLike === 'number') {
+    return Math.round(feelsLike);
+  }
+  return 0;
+});
 </script>
 
 <template>
@@ -45,6 +86,7 @@ const {
         </template>
         <DailyForecast />
       </div>
+      weatherData.value.
       <div class="w-full duration-500 lg:w-3/4">
         <WeatherInfo
           :pm="roundedPM"

@@ -1,37 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useThemeStore } from '../store/themeStore';
-import { useWeatherStore } from '../store/weatherStore';
-import LocationDataResponse from '../interfaces/Location';
+import { useAutoCompleteStore } from '../store/autocompleteStore.ts';
 import { storeToRefs } from 'pinia';
 
 const themeStore = useThemeStore();
-const weatherStore = useWeatherStore();
+const autocompleteStore = useAutoCompleteStore();
 
-const { autocompleteData, isLoading } = storeToRefs(weatherStore);
-const {
-  fetchWeather,
-  fetchAirPollution,
-  fetchForecast,
-  debouncedAutoComplete,
-} = weatherStore;
+const { debouncedAutoComplete, handleItemClick } = autocompleteStore;
+const { autocompleteData, searchQuery, isLoading } =
+  storeToRefs(autocompleteStore);
 
-const { currentTheme } = storeToRefs(themeStore);
 const { handleColorTheme } = themeStore;
-
-const searchQuery = ref<string>();
+const { currentTheme } = storeToRefs(themeStore);
 
 const handleSearchInput = () => {
   debouncedAutoComplete(searchQuery.value as string);
-};
-
-const handleItemClick = (location: LocationDataResponse) => {
-  searchQuery.value = '';
-  autocompleteData.value = undefined;
-
-  fetchWeather(location.lat, location.lon);
-  fetchAirPollution(location.lat, location.lon);
-  fetchForecast(location.lat, location.lon);
 };
 </script>
 <template>
@@ -62,7 +45,7 @@ const handleItemClick = (location: LocationDataResponse) => {
         <input
           class="ml-1 h-6 w-full border-t-transparent bg-transparent text-lg font-medium text-zinc-800 outline-none outline duration-500 dark:text-yellow-50"
           @input="handleSearchInput"
-          v-model="searchQuery"
+          v-model.trim="searchQuery"
           name="search"
           autocomplete="off"
           placeholder="Поиск"
@@ -86,9 +69,9 @@ const handleItemClick = (location: LocationDataResponse) => {
       >
         <ul class="grid flex-col items-center p-2">
           <a
-            v-for="(location, index) in autocompleteData"
-            @click="handleItemClick(location)"
-            :key="index"
+            v-for="location in autocompleteData"
+            @click="handleItemClick(location.lat, location.lon)"
+            :key="location?.name"
             class="my-2 flex cursor-pointer items-center rounded-lg p-1 duration-150 hover:bg-stone-200/50 dark:hover:bg-zinc-700/50"
           >
             <div class="mr-2">

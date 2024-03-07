@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useWeatherStore } from '../store/weatherStore';
 import { getHours } from '../utils/dateUtils';
 
-const { forecastHourly, weatherData } = storeToRefs(useWeatherStore());
+const { forecastHourlyData, weatherData } = storeToRefs(useWeatherStore());
 </script>
 <template>
   <div>
@@ -15,7 +15,7 @@ const { forecastHourly, weatherData } = storeToRefs(useWeatherStore());
         class="container-snap flex touch-auto gap-3 overflow-auto scroll-smooth duration-500"
       >
         <li
-          v-for="(weather, index) in forecastHourly"
+          v-for="(weather, index) in forecastHourlyData"
           :key="index"
           class="flex flex-col items-center rounded-xl bg-stone-100 px-6 py-4 duration-500 dark:bg-zinc-800"
         >
