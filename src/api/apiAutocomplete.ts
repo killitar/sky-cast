@@ -4,10 +4,14 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export const fetchAutoCompleteData = async (input: string) => {
   try {
-    const res = await fetch(
-      `${baseUrl}/geo/1.0/direct?appid=${apiKey}&q=${input}&limit=3`
-    );
-    return res.data;
+    if (input !== '') {
+      const res = await fetch(
+        `${baseUrl}/geo/1.0/direct?appid=${apiKey}&q=${input}&limit=3`
+      );
+      return res.data;
+    } else {
+      return undefined;
+    }
   } catch (error) {
     console.error('Ошибка при получении данных автозаполнения:', error);
   }
