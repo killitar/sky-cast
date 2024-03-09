@@ -86,7 +86,6 @@ const roundedFellsLike = computed(() => {
         </template>
         <DailyForecast />
       </div>
-      weatherData.value.
       <div class="w-full duration-500 lg:w-3/4">
         <WeatherInfo
           :pm="roundedPM"
